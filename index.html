@@ -4,218 +4,570 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
-    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/b6f74bd597.js" crossorigin="anonymous"></script>
-
-    <title>Wazadio</title>
+    <title>Juni Dio Kasandra — Backend Engineer</title>
 </head>
-<body class="container bg-light">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo.jpg" alt="Bootstrap" width="30" height="24">
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#">
+                <img src="assets/logo.jpg" alt="Logo">
+                Wazadio
             </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#about">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skill">Skill</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-          </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </nav>
-    <div id="about" class="container">
-        <br/><br/>
-        <h2 class="text-center fw-bold">ABOUT ME</h2>
-        <p>
-            <strong>I'm Juni Dio Kasandra</strong>, a dedicated Software Developer holding a Bachelor's degree in Computer Engineering. My expertise lies in the intricacies of crafting powerful RESTful APIs and building scalable solutions using Microservices architecture. I take pride in my proficiency in mobile app development, ensuring each project reflects a user-centric design approach. My toolkit includes mastery of programming languages like Python, Golang, and NodeJs. Fueled by a passion for pushing boundaries in technology, I bring a wealth of knowledge to the software development arena. With a proven track record of delivering robust solutions, I'm eager to contribute my skills to the creation of cutting-edge applications, making a mark in the dynamic world of tech.
-        </p>
-    </div>
-    <hr class="divider"/>
-    <div id="portfolio" class="container">
-        <br/><br/>
-        <h2 class="text-center fw-bold">PORTFOLIO</h2>
-        <div class="text-center"><a href="https://github.com/wazadio" target="_blank"><p class="fa-brands fa-github"></p><span> https://github.com/wazadio</span></a></div>
-        <div id="taskManagement" class="carousel slide" data-bs-ride="carousel">
-            <h3>Task Management</h3>
-            <p>Desktop App written in Python to help manage schedule and the deadline reminder. This app does not use SQL database, stores data in plain text in a .txt file</p>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/task-manager-1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/task-manager-2.png" class="d-block w-100" alt="...">
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#taskManagement" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#taskManagement" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Juni Dio Kasandra</h1>
+                <h2 class="hero-title">Backend Engineer</h2>
+                <p class="hero-desc">
+                    I build the systems that power products at scale — from fintech APIs and microservices at
+                    <strong>BRI</strong> and <strong>Koinworks</strong> to accounting infrastructure at <strong>Mekari</strong>.
+                    5+ years shipping reliable, high-throughput backend in Go and Python.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span>5+</span><p>Years Experience</p></div>
+                    <div class="hero-stat"><span>7</span><p>Companies</p></div>
+                    <div class="hero-stat"><span>20%</span><p>Response Time Cut</p></div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn-primary"><i class="fa-solid fa-briefcase"></i> View Experience</a>
+                    <a href="#contact" class="btn-outline"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <div class="photo-wrap">
+                    <div class="photo-ring">
+                        <img src="assets/self.jpeg" alt="Juni Dio Kasandra">
+                    </div>
+                    <div class="photo-badge"><i class="fa-solid fa-code"></i> Backend Engineer</div>
+                    <div class="photo-dot photo-dot-1"></div>
+                    <div class="photo-dot photo-dot-2"></div>
+                    <div class="photo-dot photo-dot-3"></div>
+                </div>
             </div>
         </div>
-        <br/><br/>
-        <div id="tictactoe" class="carousel slide" data-bs-ride="carousel">
-            <h3>Tic Tac Toe</h3>
-            <p>Desktop Game written in Python. Answer the question if correct you can fill one box. First one to get 3 boxes horizontally, vertically, or diagonally will win</p>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/tic-tac-toe-1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/tic-tac-toe-2.png" class="d-block w-100" alt="...">
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#tictactoe" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#tictactoe" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+        <a href="#about" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
+            <div class="about-grid">
+                <div class="about-bio">
+                    <p>
+                        I'm a Backend Engineer with 5+ years of hands-on experience across fintech, ERP, and financial infrastructure —
+                        currently building accounting software at <strong>Mekari Jurnal</strong>.
+                    </p>
+                    <p>
+                        My work spans Go microservices, distributed systems, and cloud infrastructure. I've migrated monoliths to
+                        microservices, cut API latency by 20%, integrated government APIs for loan risk mitigation at BRI,
+                        and built serverless platforms on AWS Lambda — all while keeping test coverage above 90%.
+                    </p>
+                    <p>
+                        I care about clean architecture, observable systems, and writing code that the next engineer can actually maintain.
+                        Outside work I'm drawn to distributed systems, AI engineering, and platform engineering.
+                    </p>
+                    <ul class="info-list">
+                        <li><i class="fa-solid fa-location-dot"></i>Jakarta, Indonesia</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i>Bachelor of Computer Engineering — Andalas University</li>
+                        <li><i class="fa-solid fa-briefcase"></i>Currently at Mekari (Mekari Jurnal)</li>
+                        <li><i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/junidio" target="_blank" rel="noopener noreferrer">linkedin.com/in/junidio</a></li>
+                    </ul>
+                </div>
+                <div class="about-cards">
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-server"></i>
+                        <h4>Microservices</h4>
+                        <p>Scalable distributed backend systems</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>Performance</h4>
+                        <p>System optimization & bottleneck reduction</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h4>Cloud & DevOps</h4>
+                        <p>AWS, Kubernetes, Docker, CI/CD</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-database"></i>
+                        <h4>Data & Infra</h4>
+                        <p>PostgreSQL, Redis, Kafka, MongoDB</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <br/><br/>
-        <div id="dapp" class="carousel slide" data-bs-ride="carousel">
-            <h3>Tic Tac Toe</h3>
-            <p>Signature Transaction app, written in Go and React Native. Ask for signature, sign signature digitally, and store the transaction in blockchain to make it more secure</p>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/dapp-1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-3.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-4.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-5.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-6.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-7.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-8.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-9.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-10.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-11.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-12.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/dapp-13.png" class="d-block w-100" alt="...">
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#dapp" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#dapp" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="dark">
+        <div class="section-inner">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-line"></div>
+            <div class="timeline">
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Mekari (Mekari Jurnal)</p>
+                            </div>
+                            <span class="tl-date">Jun 2025 – Present</span>
+                        </div>
+                        <p class="tl-type">Fulltime · Hybrid</p>
+                        <ul class="tl-list">
+                            <li>Shipped new features for Mekari Jurnal, a leading cloud-based accounting SaaS used by thousands of SMEs.</li>
+                            <li>Identified and resolved architectural pattern issues, improving long-term system maintainability.</li>
+                            <li>Designed MySQL schema optimizations with targeted indexing, reducing critical query times.</li>
+                            <li>Integrated AI tooling (GitHub Copilot) into team workflow, boosting development velocity by ~50%.</li>
+                            <li>Maintained unit test coverage ≥90% across all new changes as a team standard.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Golang</span><span>Echo</span><span>MySQL</span><span>Redis</span>
+                            <span>Docker</span><span>Kubernetes</span><span>Kafka</span><span>Ruby on Rails</span><span>Alicloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Sapphire Skyscraper (Pinjamin App)</p>
+                            </div>
+                            <span class="tl-date">Feb 2025 – May 2025</span>
+                        </div>
+                        <p class="tl-type">Fulltime · Onsite</p>
+                        <ul class="tl-list">
+                            <li>Designed and built scalable Go microservices from scratch for a fintech lending platform.</li>
+                            <li>Implemented Redis caching strategies that significantly reduced API response times under load.</li>
+                            <li>Established CI/CD pipelines using Jenkins and deployed containerized services to Kubernetes.</li>
+                            <li>Optimized MySQL schema design with indexing for high-read financial data workloads.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Golang</span><span>MySQL</span><span>Redis</span><span>Docker</span>
+                            <span>Jenkins</span><span>Kubernetes</span><span>Gin</span><span>GORM</span><span>Huawei Cloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> PT Bank Rakyat Indonesia (Briguna App)</p>
+                            </div>
+                            <span class="tl-date">Jan 2024 – Feb 2025</span>
+                        </div>
+                        <p class="tl-type">Contract · Hybrid</p>
+                        <ul class="tl-list">
+                            <li>Integrated government data APIs (Dukcapil) to automate loan eligibility checks and reduce non-performing loan risk.</li>
+                            <li>Cut API response time by <strong>20%</strong> through Redis caching and batch query optimizations.</li>
+                            <li>Led end-to-end migration from a monolithic codebase to independent microservices, improving scalability and deploy cadence.</li>
+                            <li>Maintained >90% unit test coverage; authored OpenAPI 3.0 documentation as the team standard.</li>
+                            <li>Built internal Go packages and a Python document-patching tool to automate recurring production tasks.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Go</span><span>Python</span><span>NodeJS</span><span>PostgreSQL</span>
+                            <span>Redis</span><span>Kafka</span><span>Docker</span><span>Kubernetes</span><span>gRPC</span><span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Kopwar (Gem Job Portal App)</p>
+                            </div>
+                            <span class="tl-date">Oct 2022 – Dec 2023</span>
+                        </div>
+                        <p class="tl-type">Contract · Remote</p>
+                        <ul class="tl-list">
+                            <li>Built the entire backend for a job-seeker portal from the ground up, including PostgreSQL schema design.</li>
+                            <li>Developed 3 independent microservices with async inter-service communication patterns.</li>
+                            <li>Deployed services on AWS Lambda (serverless), integrating AWS SES and SNS for transactional email and SMS.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Go</span><span>PostgreSQL</span><span>AWS Lambda</span>
+                            <span>AWS SES</span><span>AWS Gateway</span><span>REST API</span><span>Gin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Koinworks (Koinneo App)</p>
+                            </div>
+                            <span class="tl-date">May 2022 – Sep 2022</span>
+                        </div>
+                        <p class="tl-type">Fulltime · Remote</p>
+                        <ul class="tl-list">
+                            <li>Enhanced and maintained core loan features for a fintech platform serving thousands of borrowers.</li>
+                            <li>Performed distributed tracing, performance profiling, and root cause analysis using Datadog.</li>
+                            <li>Participated in agile ceremonies — sprint planning, grooming, and daily stand-ups.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Go</span><span>Python</span><span>PostgreSQL</span>
+                            <span>Kafka</span><span>Docker</span><span>gRPC</span><span>Datadog</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Odoo Developer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Hashmicro Solusi Indonesia</p>
+                            </div>
+                            <span class="tl-date">Sep 2021 – Feb 2022</span>
+                        </div>
+                        <p class="tl-type">Freelance · Remote</p>
+                        <ul class="tl-list">
+                            <li>Customized Odoo ERP modules including Invoice, Sales, Inventory, and Purchasing for enterprise clients.</li>
+                            <li>Developed dynamic PDF report templates and collaborated with ERP consultants to translate business requirements.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Python</span><span>Odoo</span><span>PostgreSQL</span><span>XML</span><span>JavaScript</span><span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Backend Engineer</h3>
+                                <p class="tl-company"><i class="fa-solid fa-building"></i> Multipolar Technology Indonesia</p>
+                            </div>
+                            <span class="tl-date">Nov 2020 – Apr 2022</span>
+                        </div>
+                        <p class="tl-type">Fulltime · Remote</p>
+                        <ul class="tl-list">
+                            <li>Built routing microservices handling ISO20022 financial message transformation and delivery.</li>
+                            <li>Maintained >60% unit test coverage and worked closely with QA on end-to-end validation flows.</li>
+                        </ul>
+                        <div class="tl-stack">
+                            <span>Go</span><span>Python</span><span>Kafka</span>
+                            <span>Docker</span><span>MongoDB</span><span>ISO20022</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <br/><br/>
-        <div id="backend" class="carousel slide" data-bs-ride="carousel">
-            <h3>Server API</h3>
-            <p>Develop backend to serve API for fintech and ERP provider companies.Golang and Python is the main language use for this</p>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/python.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/golang.jpeg" class="d-block w-100" alt="...">
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#backend" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#backend" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-inner">
+            <h2 class="section-title">Skills</h2>
+            <div class="section-line"></div>
+            <div class="skills-cats">
+                <div class="skill-group">
+                    <h3 class="skills-cat"><i class="fa-solid fa-terminal"></i> Languages</h3>
+                    <div class="skill-chips">
+                        <span class="chip-main">Go</span>
+                        <span class="chip-main">Python</span>
+                        <span class="chip-sec">Node.js</span>
+                        <span class="chip-sec">PHP</span>
+                        <span class="chip-sec">Java</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skills-cat"><i class="fa-solid fa-layer-group"></i> Frameworks & APIs</h3>
+                    <div class="skill-chips">
+                        <span class="chip-main">gRPC</span>
+                        <span class="chip-main">REST API</span>
+                        <span class="chip-main">Gin</span>
+                        <span class="chip-sec">Echo</span>
+                        <span class="chip-sec">GORM</span>
+                        <span class="chip-sec">GraphQL</span>
+                        <span class="chip-sec">OpenAPI</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skills-cat"><i class="fa-solid fa-database"></i> Databases & Messaging</h3>
+                    <div class="skill-chips">
+                        <span class="chip-main">PostgreSQL</span>
+                        <span class="chip-main">MySQL</span>
+                        <span class="chip-main">Redis</span>
+                        <span class="chip-main">Kafka</span>
+                        <span class="chip-sec">MongoDB</span>
+                        <span class="chip-sec">Elasticsearch</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skills-cat"><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-chips">
+                        <span class="chip-main">Docker</span>
+                        <span class="chip-main">Kubernetes</span>
+                        <span class="chip-sec">AWS Lambda</span>
+                        <span class="chip-sec">AWS SES</span>
+                        <span class="chip-sec">GitHub Actions</span>
+                        <span class="chip-sec">Grafana</span>
+                        <span class="chip-sec">Datadog</span>
+                        <span class="chip-sec">Linux</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <hr class="divider"/>
-    <div id="skill" class="container">
-        <br/><br/>
-        <h2 class="text-center fw-bold">SKILL</h2>
-        <p class="fw-bold">Golang</p>
-        <div class="progress" role="progressbar" aria-label="Golang" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 80%">80</div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="dark">
+        <div class="section-inner">
+            <h2 class="section-title">Education</h2>
+            <div class="section-line"></div>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="edu-info">
+                        <h3>Bachelor of Computer Engineering</h3>
+                        <p class="edu-school">Andalas University</p>
+                        <p class="edu-desc">Studied fundamentals of computer engineering, networks, software development, and embedded systems.</p>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="edu-info">
+                        <h3>Machine Learning Path</h3>
+                        <p class="edu-school">Bangkit Academy — Led by Google, Tokopedia, Gojek & Traveloka</p>
+                        <p class="edu-desc">Intensive program covering machine learning, deep learning, and AI application development.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br/>
-        <p class="fw-bold">Python</p>
-        <div class="progress" role="progressbar" aria-label="Python" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 80%">80</div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <div class="section-inner">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
+            <div class="github-row">
+                <a href="https://github.com/wazadio" target="_blank" rel="noopener noreferrer" class="github-link">
+                    <i class="fa-brands fa-github"></i> github.com/wazadio
+                </a>
+            </div>
+            <div class="portfolio-grid">
+
+                <!-- Mekari Jurnal -->
+                <div class="proj-card">
+                    <div class="proj-header" style="--proj-color: #22c55e;">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div class="proj-stats">
+                            <div class="proj-stat"><span>SaaS</span><small>Cloud-based</small></div>
+                            <div class="proj-stat"><span>≥90%</span><small>test coverage</small></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="proj-company">Mekari — Current Role</p>
+                        <h3>Mekari Jurnal</h3>
+                        <p>Cloud-based accounting software used by thousands of Indonesian SMEs. Contributes new features across the accounting module — including journal entries, invoicing, and financial reporting — while optimizing MySQL schemas and maintaining high test coverage across all changes.</p>
+                        <div class="tags">
+                            <span>Golang</span><span>Echo</span><span>MySQL</span><span>Redis</span>
+                            <span>Kafka</span><span>Kubernetes</span><span>Ruby on Rails</span><span>Alicloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BRI Briguna -->
+                <div class="proj-card">
+                    <div class="proj-header" style="--proj-color: #0ea5e9;">
+                        <i class="fa-solid fa-landmark"></i>
+                        <div class="proj-stats">
+                            <div class="proj-stat"><span>20%</span><small>latency cut</small></div>
+                            <div class="proj-stat"><span>&gt;90%</span><small>test coverage</small></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="proj-company">PT Bank Rakyat Indonesia</p>
+                        <h3>Briguna Loan Platform</h3>
+                        <p>Migrated a monolithic lending system to microservices architecture. Integrated government APIs (Dukcapil) for automated loan eligibility checks, reducing non-performing loan risk. Cut API response time by 20% with Redis caching and batch query processing.</p>
+                        <div class="tags">
+                            <span>Go</span><span>Python</span><span>gRPC</span><span>PostgreSQL</span>
+                            <span>Redis</span><span>Kafka</span><span>Kubernetes</span><span>OpenAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature DApp -->
+                <div class="proj-card">
+                    <div class="proj-header" style="--proj-color: #8b5cf6;">
+                        <i class="fa-solid fa-file-signature"></i>
+                        <div class="proj-stats">
+                            <div class="proj-stat"><span>13</span><small>screens</small></div>
+                            <div class="proj-stat"><span>On-chain</span><small>storage</small></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="proj-company">Personal Project</p>
+                        <h3>Signature Transaction DApp</h3>
+                        <p>Decentralized application for digital document signing. Users request signatures, sign digitally, and every transaction is recorded on-chain — making tampering cryptographically impossible. Built with a Go backend and React Native mobile client.</p>
+                        <div class="tags">
+                            <span>Golang</span><span>React Native</span><span>Blockchain</span><span>Web3</span><span>Smart Contracts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gem Job Portal -->
+                <div class="proj-card">
+                    <div class="proj-header" style="--proj-color: #10b981;">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <div class="proj-stats">
+                            <div class="proj-stat"><span>3</span><small>microservices</small></div>
+                            <div class="proj-stat"><span>Serverless</span><small>on AWS</small></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="proj-company">Kopwar</p>
+                        <h3>Gem Job Portal</h3>
+                        <p>Full backend for a job-seeker platform built from scratch. Designed PostgreSQL schemas, built 3 independent Go microservices, and deployed fully serverless on AWS Lambda. Integrated AWS SES for transactional email and SMS notifications.</p>
+                        <div class="tags">
+                            <span>Go</span><span>PostgreSQL</span><span>AWS Lambda</span>
+                            <span>AWS SES</span><span>API Gateway</span><span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ISO20022 Routing -->
+                <div class="proj-card">
+                    <div class="proj-header" style="--proj-color: #f59e0b;">
+                        <i class="fa-solid fa-route"></i>
+                        <div class="proj-stats">
+                            <div class="proj-stat"><span>ISO20022</span><small>standard</small></div>
+                            <div class="proj-stat"><span>&gt;60%</span><small>test coverage</small></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="proj-company">Multipolar Technology Indonesia</p>
+                        <h3>Financial Message Routing System</h3>
+                        <p>Routing microservice for transforming and delivering ISO20022 financial messages — the international standard used by SWIFT and central banks. Built with Go and Kafka for high-throughput, fault-tolerant message processing.</p>
+                        <div class="tags">
+                            <span>Go</span><span>Kafka</span><span>MongoDB</span>
+                            <span>Docker</span><span>ISO20022</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <br/>
-        <p class="fw-bold">SQL</p>
-        <div class="progress" role="progressbar" aria-label="SQL" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 70%">70</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="dark">
+        <div class="section-inner">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-line"></div>
+            <p class="contact-sub">Open to new opportunities, collaborations, or just a friendly chat about backend engineering.</p>
+            <div class="contact-row">
+                <a href="mailto:junidio.kasandra@gmail.com" class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <span>junidio.kasandra@gmail.com</span>
+                </a>
+                <a href="tel:+6281261853337" class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <span>+62 812 6185 3337</span>
+                </a>
+                <a href="https://linkedin.com/in/junidio" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                    <span>linkedin.com/in/junidio</span>
+                </a>
+                <a href="https://github.com/wazadio" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                    <span>github.com/wazadio</span>
+                </a>
+            </div>
         </div>
-        <br/>
-        <p class="fw-bold">React & React Native</p>
-        <div class="progress" role="progressbar" aria-label="React" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 60%">60</div>
-        </div>
-        <br/>
-        <p class="fw-bold">Kafka</p>
-        <div class="progress" role="progressbar" aria-label="Kafka" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 60%">60</div>
-        </div>
-        <br/>
-        <p class="fw-bold">Redis</p>
-        <div class="progress" role="progressbar" aria-label="Redis" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 60%">60</div>
-        </div>
-        <br/>
-        <p class="fw-bold">Docker</p>
-        <div class="progress" role="progressbar" aria-label="Docker" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 70%">70</div>
-        </div>
-        <br/>
-        <p class="fw-bold">AWS</p>
-        <div class="progress" role="progressbar" aria-label="AWS" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar d-inline" style="width: 50%">50</div>
-        </div>
-        <br/>
-    </div>
-    <hr class="divider"/>
-    <div id="contact" class="container text-center bg-dark text-light">
-        <h2 class="text-center fw-bold">CONTACT</h2>
-        <p class="fa-solid fa-envelope"></p><span> junidio.kasandra@gmail.com</span><br/>
-        <p class="fa-solid fa-phone"></p><span> +6281261853337</span>
-    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Juni Dio Kasandra. All rights reserved.</p>
+    </footer>
+
+    <script>
+        /* ---- Navbar scroll ---- */
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        /* ---- Mobile menu toggle ---- */
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+            document.getElementById('navToggle').classList.toggle('open');
+        });
+
+        /* ---- Close nav on link click ---- */
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+                document.getElementById('navToggle').classList.remove('open');
+            });
+        });
+
+        /* ---- Carousel ---- */
+        const carouselState = {};
+        function slide(id, dir) {
+            const car = document.getElementById(id);
+            const track = car.querySelector('.carousel-track');
+            const total = track.querySelectorAll('img').length;
+            if (!carouselState[id]) carouselState[id] = 0;
+            carouselState[id] = (carouselState[id] + dir + total) % total;
+            track.style.transform = `translateX(-${carouselState[id] * 100}%)`;
+        }
+
+        /* ---- Skill bar animation on scroll ---- */
+        const skillSection = document.getElementById('skills');
+        let animated = false;
+        new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !animated) {
+                animated = true;
+                document.querySelectorAll('.skill-fill').forEach(el => {
+                    el.style.width = el.dataset.w + '%';
+                });
+            }
+        }, { threshold: 0.25 }).observe(skillSection);
+    </script>
 </body>
 </html>
